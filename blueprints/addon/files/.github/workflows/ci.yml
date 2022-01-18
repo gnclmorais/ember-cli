@@ -33,6 +33,7 @@ jobs:
   floating:
     name: "Floating Dependencies"
     runs-on: ubuntu-latest
+    timeout-minutes: 5
 
     steps:
       - uses: actions/checkout@v2
@@ -48,6 +49,7 @@ jobs:
   try-scenarios:
     name: ${{ matrix.try-scenario }}
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     needs: 'test'
 
     strategy:
